@@ -24,7 +24,8 @@ $Start = getTime();
 / (Please note that the palindromic number, in either
 / base, may not include leading zeros.)
 /
-/ Solution: ?
+/ Solution: 34967th
+/ Runtime: ~233 seconds
 /
 **************************/
 
