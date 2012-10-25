@@ -31,14 +31,14 @@ $Start = getTime();
 set_time_limit(300);
 
 function isPalendrome($n) {
-	$n = strval($n);
-	$len = strlen($n);
-	$reverseN = "";
-	for ($i=$len-1; $i>=0; $i--) {
-		$reverseN = $reverseN . "" . substr($n, $i, 1);
-	}
-	if ($n == $reverseN) return true;
-	else return false;
+    $n = strval($n);
+    $len = strlen($n);
+    $reverseN = "";
+    for ($i=$len-1; $i>=0; $i--) {
+        $reverseN = $reverseN . "" . substr($n, $i, 1);
+    }
+    if ($n == $reverseN) return true;
+    else return false;
 }
 
 $upper_limit = 1000000;
