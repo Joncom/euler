@@ -97,12 +97,18 @@ function convertToBase2($n) {
 
 
 
-$upper_limit = 1000000;
+$upper_limit = 1000;
 
 // Figure stuff out here...
 for( $i = 1; $i < $upper_limit; $i++ ) {
 
+    $base2 = convertToBase2( $i );
 
+    if( isPalendrome( $i ) && isPalendrome( $base2 ) ) {
+
+        echo "$i is a palendrome in base 10 and in base 2 ( $base2 ). <br />";
+
+    }
 
 }
 
