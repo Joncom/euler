@@ -51,9 +51,6 @@ function convertToBase2($n) {
 
         while( $running ) {
 
-            //echo "n = $n <br />"
-            //   . "bit_step = $bit_step <br />";
-
             if( $n / pow( 2, $bit_step ) > 1 ) {
 
                 // Not the biggest, increase by 1 step.
@@ -92,12 +89,7 @@ function convertToBase2($n) {
 
         }
 
-
-
-    // Temp debugging.
-    echo "<br /> n = $n <br />"
-       . "bit_step = $bit_step <br />"
-       . "base2N = $base2N <br />";
+    return $base2N;
 
 }
 
