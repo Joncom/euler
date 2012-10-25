@@ -15,7 +15,7 @@ $Start = getTime();
 
 /**************************
 /
-/ The decimal number, 585 = 10010010012 (binary), is
+/ The decimal number, 585 = 1001001001 to-the 2 (binary), is
 / palindromic in both bases.
 /
 / Find the sum of all numbers, less than one million,
