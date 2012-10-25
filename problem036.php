@@ -47,29 +47,22 @@ function convertToBase2($n) {
 
         $bit_step = 0;
 
-        $bit_equivalent = 1;
-
         $running = true;
 
         while( $running ) {
 
             echo "n = $n <br />"
-               . "bit_equivalent = $bit_equivalent <br />"
                . "bit_step = $bit_step <br />";
 
-            if( $n / $bit_equivalent > 1 ) {
+            if( $n / pow( 2, $bit_step ) > 1 ) {
 
                 // Not the biggest, increase by 1 step.
-
-                $bit_equivalent *= 2;
 
                 $bit_step++;
 
             } else {
 
                 // This step was too big, backtrack 1 step, and stop.
-
-                $bit_equivalent /= 2;
 
                 $bit_step--;
 
@@ -81,12 +74,15 @@ function convertToBase2($n) {
 
     // Build binary number.
 
+        /*for( $i = $bit_step; $i >= 0; $i-- ) {
 
+
+
+        }*/
 
 
     // Temp debugging.
     echo "<br /> n = $n <br />"
-       . "bit_equivalent = $bit_equivalent <br />"
        . "bit_step = $bit_step";
 
 }
