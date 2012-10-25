@@ -41,7 +41,14 @@ function isPalendrome($n) {
 	else return false;
 }
 
+$upper_limit = 1000000;
+
 // Figure stuff out here...
+for( $i = 1; $i < $upper_limit; $i++ ) {
+
+
+
+}
 
 ?>
 
