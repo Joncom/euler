@@ -25,7 +25,7 @@ $Start = getTime();
 / base, may not include leading zeros.)
 /
 / Solution: 34967th
-/ Runtime: ~233 seconds
+/ Running-time: ~112 seconds
 /
 **************************/
 
@@ -104,6 +104,10 @@ $sum = 0;
 
 // Figure stuff out here...
 for( $i = 1; $i < $upper_limit; $i++ ) {
+
+    // Only bother with odd numbers because, in base 2, an
+    // even number always starts with 1 and ends in 0.
+    if( $i % 2 === 0 ) continue;
 
     $base2 = convertToBase2( $i );
 
