@@ -51,7 +51,7 @@ function convertToBase2($n) {
 
         while( $running ) {
 
-            if( $n / pow( 2, $bit_step ) > 1 ) {
+            if( $n / pow( 2, $bit_step ) >= 1 ) {
 
                 // Not the biggest, increase by 1 step.
 
