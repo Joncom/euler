@@ -99,6 +99,8 @@ function convertToBase2($n) {
 
 $upper_limit = 1000000;
 
+$sum = 0;
+
 // Figure stuff out here...
 for( $i = 1; $i < $upper_limit; $i++ ) {
 
@@ -108,9 +110,14 @@ for( $i = 1; $i < $upper_limit; $i++ ) {
 
         echo "$i is a palendrome in base 10 and in base 2 ( $base2 ). <br />";
 
+        $sum += $i;
+
     }
 
 }
+
+echo "The sum of all numbers, less than $upper_limit, "
+   . "which are palindromic in base 10 and base 2 is $sum."
 
 ?>
 
