@@ -93,7 +93,7 @@ function convertToBase2($n) {
 
 }
 
-convertToBase2(560);
+echo convertToBase2(1000000);
 
 $upper_limit = 1000000;
 
