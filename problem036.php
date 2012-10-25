@@ -41,6 +41,58 @@ function isPalendrome($n) {
     else return false;
 }
 
+function convertToBase2($n) {
+
+    // Figure out the biggest step that divides out of n.
+
+        $bit_step = 0;
+
+        $bit_equivalent = 1;
+
+        $running = true;
+
+        while( $running ) {
+
+            echo "n = $n <br />"
+               . "bit_equivalent = $bit_equivalent <br />"
+               . "bit_step = $bit_step <br />";
+
+            if( $n / $bit_equivalent > 1 ) {
+
+                // Not the biggest, increase by 1 step.
+
+                $bit_equivalent *= 2;
+
+                $bit_step++;
+
+            } else {
+
+                // This step was too big, backtrack 1 step, and stop.
+
+                $bit_equivalent /= 2;
+
+                $bit_step--;
+
+                $running = false;
+
+            }
+
+        }
+
+    // Build binary number.
+
+
+
+
+    // Temp debugging.
+    echo "<br /> n = $n <br />"
+       . "bit_equivalent = $bit_equivalent <br />"
+       . "bit_step = $bit_step";
+
+}
+
+convertToBase2(560);
+
 $upper_limit = 1000000;
 
 // Figure stuff out here...
