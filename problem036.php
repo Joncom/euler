@@ -51,8 +51,8 @@ function convertToBase2($n) {
 
         while( $running ) {
 
-            echo "n = $n <br />"
-               . "bit_step = $bit_step <br />";
+            //echo "n = $n <br />"
+            //   . "bit_step = $bit_step <br />";
 
             if( $n / pow( 2, $bit_step ) > 1 ) {
 
@@ -74,16 +74,30 @@ function convertToBase2($n) {
 
     // Build binary number.
 
-        /*for( $i = $bit_step; $i >= 0; $i-- ) {
+        $base2N = "";
 
+        for( $i = $bit_step; $i >= 0; $i-- ) {
 
+            if( $n / pow( 2, $i ) >= 1 ) {
 
-        }*/
+                $n -= pow( 2, $i );
+
+                $base2N .= "1";
+
+            } else {
+
+                $base2N .= "0";
+
+            }
+
+        }
+
 
 
     // Temp debugging.
     echo "<br /> n = $n <br />"
-       . "bit_step = $bit_step";
+       . "bit_step = $bit_step <br />"
+       . "base2N = $base2N <br />";
 
 }
 
