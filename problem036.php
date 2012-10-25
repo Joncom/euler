@@ -97,7 +97,7 @@ function convertToBase2($n) {
 
 
 
-$upper_limit = 1000;
+$upper_limit = 1000000;
 
 // Figure stuff out here...
 for( $i = 1; $i < $upper_limit; $i++ ) {
