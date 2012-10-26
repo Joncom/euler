@@ -25,7 +25,7 @@ $Start = getTime();
 / base, may not include leading zeros.)
 /
 / Solution: 34967th
-/ Running-time: ~112 seconds
+/ Running-time: ~16 seconds
 /
 **************************/
 
