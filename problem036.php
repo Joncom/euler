@@ -29,7 +29,7 @@ $Start = getTime();
 /
 **************************/
 
-set_time_limit(300);
+set_time_limit(30);
 
 function isPalendrome($n) {
 
