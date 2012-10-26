@@ -59,7 +59,6 @@ $upper_limit = 1000000;
 
 $sum = 0;
 
-// Figure stuff out here...
 for( $i = 1; $i < $upper_limit; $i++ ) {
 
     // Only bother with odd numbers because, in base 2, an
