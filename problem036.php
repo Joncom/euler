@@ -39,7 +39,7 @@ function isPalendrome($n) {
 
     for( $i = 0; $i <= $len / 2; $i++ ) {
 
-        if( $n[ $i ] != $n[ $len - $i - 1 ] ) return false;
+        if( $n[ $i - 1 ] != $n[ $len - $i - 1 ] ) return false;
 
     }
 
