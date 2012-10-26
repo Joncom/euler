@@ -56,62 +56,6 @@ function decimalToBinary($n) {
 
 }
 
-function convertToBase2($n) {
-
-    // Figure out the biggest step that divides out of n.
-
-        $bit_step = 0;
-
-        $running = true;
-
-        while( $running ) {
-
-            if( $n / pow( 2, $bit_step ) >= 1 ) {
-
-                // Not the biggest, increase by 1 step.
-
-                $bit_step++;
-
-            } else {
-
-                // This step was too big, backtrack 1 step, and stop.
-
-                $bit_step--;
-
-                $running = false;
-
-            }
-
-        }
-
-    // Build binary number.
-
-        $base2N = "";
-
-        for( $i = $bit_step; $i >= 0; $i-- ) {
-
-            if( $n / pow( 2, $i ) >= 1 ) {
-
-                $n -= pow( 2, $i );
-
-                $base2N .= "1";
-
-            } else {
-
-                $base2N .= "0";
-
-            }
-
-        }
-
-    return $base2N;
-
-}
-
-
-
-
-
 $upper_limit = 1000000;
 
 $sum = 0;
