@@ -32,14 +32,19 @@ $Start = getTime();
 set_time_limit(300);
 
 function isPalendrome($n) {
+
     $n = strval($n);
+
     $len = strlen($n);
-    $reverseN = "";
-    for ($i=$len-1; $i>=0; $i--) {
-        $reverseN = $reverseN . "" . substr($n, $i, 1);
+
+    for( $i = 0; $i <= $len / 2; $i++ ) {
+
+        if( $n[ $i ] != $n[ $len - $i - 1 ] ) return false;
+
     }
-    if ($n == $reverseN) return true;
-    else return false;
+
+    return true;
+
 }
 
 function decimalToBinary($n) {
@@ -78,7 +83,7 @@ for( $i = 1; $i < $upper_limit; $i++ ) {
 }
 
 echo "The sum of all numbers, less than $upper_limit, "
-   . "which are palindromic in base 10 and base 2 is $sum."
+   . "which are palindromic in base 10 and base 2 is $sum.";
 
 ?>
 
