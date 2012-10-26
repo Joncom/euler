@@ -44,11 +44,15 @@ function isPalendrome($n) {
 
 function decimalToBinary($n) {
 
-    if( $n >= 1 ) echo $n % 2;
+    if( $n < 1 ) {
 
-    else return;
+        return;
 
-    decimalToBinary( $n / 2 );
+    } else {
+
+        return decimalToBinary( $n / 2 ) . ( $n % 2 );
+
+    }
 
 }
 
