@@ -15,7 +15,7 @@ $Start = getTime();
 
 /**************************
 /
-/ The decimal number, 585 = 1001001001 to-the 2 (binary), is
+/ The decimal number, 585 = 1001001001 base 2 (binary), is
 / palindromic in both bases.
 /
 / Find the sum of all numbers, less than one million,
@@ -61,13 +61,17 @@ for( $i = 1; $i < $upper_limit; $i++ ) {
     // even number always starts with 1 and ends in 0.
     if( $i % 2 === 0 ) continue;
 
-    $base2 = decimalToBinary( $i );
+    if( isPalendrome( $i ) ) {
 
-    if( isPalendrome( $i ) && isPalendrome( $base2 ) ) {
+        $base2 = decimalToBinary( $i );
 
-        echo "$i is a palendrome in base 10 and in base 2 ( $base2 ). <br />";
+        if( isPalendrome( $base2 ) ) {
 
-        $sum += $i;
+            echo "$i is a palendrome in base 10 and in base 2 ( $base2 ). <br />";
+
+            $sum += $i;
+
+        }
 
     }
 
