@@ -123,7 +123,7 @@ for( $i = 1; $i < $upper_limit; $i++ ) {
     // even number always starts with 1 and ends in 0.
     if( $i % 2 === 0 ) continue;
 
-    $base2 = convertToBase2( $i );
+    $base2 = decimalToBinary( $i );
 
     if( isPalendrome( $i ) && isPalendrome( $base2 ) ) {
 
