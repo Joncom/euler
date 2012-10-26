@@ -42,6 +42,16 @@ function isPalendrome($n) {
     else return false;
 }
 
+function decimalToBinary($n) {
+
+    if( $n >= 1 ) echo $n % 2;
+
+    else return;
+
+    decimalToBinary( $n / 2 );
+
+}
+
 function convertToBase2($n) {
 
     // Figure out the biggest step that divides out of n.
