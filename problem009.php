@@ -60,14 +60,14 @@ for( $k = 1; $k < 1000; $k++ ) {
 
             $triple = getABC( $m, $n, $k );
 
-            $product = ( $triple['a'] * $triple['b'] * $triple['c'] );
+            $sum = ( $triple['a'] + $triple['b'] + $triple['c'] );
 
-            if( $product == 1000 ) {
+            if( $sum == 1000 ) {
 
                 echo "a=" . $triple['a'] . ", "
                    . "b=" . $triple['b'] . ", "
                    . "c=" . $triple['c'] . ", "
-                   . "abc=" . $product
+                   . "abc=" . ( $triple['a'] * $triple['b'] * $triple['c'] )
                    . "<br />";
 
                 die("Found target product.");
