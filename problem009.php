@@ -60,7 +60,8 @@ for( $k = 1; $k < 100; $k++ ) {
             echo "a=" . $triple['a'] . ", "
                . "b=" . $triple['b'] . ", "
                . "c=" . $triple['c'] . ", "
-               . "abc=" . ( $triple['a'] * $triple['b'] * $triple['c'] );
+               . "abc=" . ( $triple['a'] * $triple['b'] * $triple['c'] )
+               . "<br />";
 
         }
     }
