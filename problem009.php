@@ -62,13 +62,17 @@ for( $k = 1; $k < 100; $k++ ) {
 
             $product = ( $triple['a'] * $triple['b'] * $triple['c'] );
 
-            echo "a=" . $triple['a'] . ", "
-               . "b=" . $triple['b'] . ", "
-               . "c=" . $triple['c'] . ", "
-               . "abc=" . $product
-               . "<br />";
+            if( $product == 1000 ) {
 
-            if( $product == 1000 ) die("Found target product.");
+                echo "a=" . $triple['a'] . ", "
+                   . "b=" . $triple['b'] . ", "
+                   . "c=" . $triple['c'] . ", "
+                   . "abc=" . $product
+                   . "<br />";
+
+                die("Found target product.");
+
+            }
 
         }
     }
