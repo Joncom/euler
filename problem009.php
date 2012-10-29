@@ -33,7 +33,7 @@ $Start = getTime();
 
 $target = 1000;
 
-set_time_limit(300);
+set_time_limit( 60 * 60 * 8 ); // 8 hrs.
 
 function getABC( $m, $n, $k = 1 ) {
 
