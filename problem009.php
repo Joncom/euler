@@ -48,11 +48,23 @@ function getABC( $m, $n, $k = 1 ) {
 }
 
 // Do work here.
-$triple = getABC(4,3);
-echo "a=" . $triple['a'] . ", "
-   . "b=" . $triple['b'] . ", "
-   . "c=" . $triple['c'] . ", "
-   . "abc=" . ( $triple['a'] * $triple['b'] * $triple['c'] );
+
+for( $k = 1; $k < 100; $k++ ) {
+
+    for( $m = 1; $m < 100; $m++ ) {
+
+        // m must be greater than n.
+        for( $n = 1; ( $n < 100 && $n < $m ); $n++ ) {
+
+            $triple = getABC(1,0);
+            echo "a=" . $triple['a'] . ", "
+               . "b=" . $triple['b'] . ", "
+               . "c=" . $triple['c'] . ", "
+               . "abc=" . ( $triple['a'] * $triple['b'] * $triple['c'] );
+
+        }
+    }
+}
 
 ?>
 
