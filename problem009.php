@@ -48,7 +48,11 @@ function getABC( $m, $n, $k = 1 ) {
 }
 
 // Do work here.
-//getABC(4,3);
+$triple = getABC(4,3);
+echo "a=" . $triple['a']
+   . "b=" . $triple['b'] . ", "
+   . "c=" . $triple['c'] . ", "
+   . "abc=" . ( $triple['a'] * $triple['b'] * $triple['c'] );
 
 ?>
 
