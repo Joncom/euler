@@ -35,17 +35,20 @@ set_time_limit(30);
 
 function getABC( $m, $n, $k = 1 ) {
 
-    $a = $k * ( pow( $m, 2 ) - pow( $n, 2 ) );
+    $result = array();
 
-    $b = $k * ( 2 * $m * $n );
+    $result['a'] = $k * ( pow( $m, 2 ) - pow( $n, 2 ) );
 
-    $c = $k * ( pow( $m, 2 ) + pow( $n, 2 ) );
+    $result['b'] = $k * ( 2 * $m * $n );
 
-    echo "a=$a, b=$b, c=$c";
+    $result['c'] = $k * ( pow( $m, 2 ) + pow( $n, 2 ) );
+
+    return $result;
 
 }
 
 // Do work here.
+//getABC(4,3);
 
 ?>
 
