@@ -33,8 +33,19 @@ $Start = getTime();
 
 set_time_limit(30);
 
-// Do work here.
+function getABC( $m, $n, $k = 1 ) {
 
+    $a = $k * ( pow( $m, 2 ) - pow( $n, 2 ) );
+
+    $b = $k * ( 2 * $m * $n );
+
+    $c = $k * ( pow( $m, 2 ) + pow( $n, 2 ) );
+
+    echo "a=$a, b=$b, c=$c";
+
+}
+
+// Do work here.
 
 ?>
 
