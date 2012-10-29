@@ -31,6 +31,8 @@ $Start = getTime();
 /
 **************************/
 
+$target = 1000;
+
 set_time_limit(30);
 
 function getABC( $m, $n, $k = 1 ) {
@@ -65,6 +67,8 @@ for( $k = 1; $k < 100; $k++ ) {
                . "c=" . $triple['c'] . ", "
                . "abc=" . $product
                . "<br />";
+
+            if( $product == 1000 ) die("Found target product.");
 
         }
     }
