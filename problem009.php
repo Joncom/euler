@@ -33,7 +33,7 @@ $Start = getTime();
 
 $target = 1000;
 
-set_time_limit(30);
+set_time_limit(300);
 
 function getABC( $m, $n, $k = 1 ) {
 
@@ -51,12 +51,12 @@ function getABC( $m, $n, $k = 1 ) {
 
 // Do work here.
 
-for( $k = 1; $k < 100; $k++ ) {
+for( $k = 1; $k < 1000; $k++ ) {
 
-    for( $m = 1; $m < 100; $m++ ) {
+    for( $m = 1; $m < 1000; $m++ ) {
 
         // m must be greater than n.
-        for( $n = 1; ( $n < 100 && $n < $m ); $n++ ) {
+        for( $n = 1; ( $n < 1000 && $n < $m ); $n++ ) {
 
             $triple = getABC( $m, $n, $k );
 
