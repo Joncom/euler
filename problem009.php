@@ -56,7 +56,7 @@ for( $k = 1; $k < 100; $k++ ) {
         // m must be greater than n.
         for( $n = 1; ( $n < 100 && $n < $m ); $n++ ) {
 
-            $triple = getABC(1,0);
+            $triple = getABC( $m, $n, $k );
             echo "a=" . $triple['a'] . ", "
                . "b=" . $triple['b'] . ", "
                . "c=" . $triple['c'] . ", "
