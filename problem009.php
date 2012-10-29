@@ -78,6 +78,8 @@ for( $k = 1; $k < 100; $k++ ) {
     }
 }
 
+echo "Exhausted all values.";
+
 ?>
 
 
