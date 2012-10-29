@@ -57,10 +57,13 @@ for( $k = 1; $k < 100; $k++ ) {
         for( $n = 1; ( $n < 100 && $n < $m ); $n++ ) {
 
             $triple = getABC( $m, $n, $k );
+
+            $product = ( $triple['a'] * $triple['b'] * $triple['c'] );
+
             echo "a=" . $triple['a'] . ", "
                . "b=" . $triple['b'] . ", "
                . "c=" . $triple['c'] . ", "
-               . "abc=" . ( $triple['a'] * $triple['b'] * $triple['c'] )
+               . "abc=" . $product
                . "<br />";
 
         }
