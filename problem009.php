@@ -64,21 +64,21 @@ for( $k = 1; $k < 1000; $k++ ) {
 
             if( $sum == 1000 ) {
 
-                echo "a=" . $triple['a'] . ", "
-                   . "b=" . $triple['b'] . ", "
-                   . "c=" . $triple['c'] . ", "
-                   . "abc=" . ( $triple['a'] * $triple['b'] * $triple['c'] )
-                   . "<br />";
+                $message = "a=" . $triple['a'] . ", "
+                         . "b=" . $triple['b'] . ", "
+                         . "c=" . $triple['c'] . ", "
+                         . "abc=" . ( $triple['a'] * $triple['b'] * $triple['c'] )
+                         . "<br />"
+                         . "Found target product.";
 
-                die("Found target product.");
+                break 3;
 
             }
-
         }
     }
 }
 
-echo "Exhausted all values.";
+echo ( !isset( $message ) ? "Exhausted all values." : $message );
 
 ?>
 
