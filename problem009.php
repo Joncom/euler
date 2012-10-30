@@ -26,8 +26,8 @@ $Start = getTime();
 /
 / Find the product abc.
 /
-/ Solution: ?
-/ Running-time: ?
+/ Solution: 31875000
+/ Running-time: 0.01 secs
 /
 **************************/
 
