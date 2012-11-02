@@ -95,7 +95,7 @@ $grid = preg_replace('!\s+!', ' ', $grid );
 // Convert grid to an array of individual values.
 $grid = explode( ' ', $grid );
 
-print_r( $grid );
+//print_r( $grid );
 
 echo "Answer: ";
 
