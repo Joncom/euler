@@ -43,7 +43,7 @@ $Start = getTime();
 /
 **************************/
 
-set_time_limit(30);
+set_time_limit( 60 * 60 ); // 1 hr
 
 function getTriangleNumber( $n ) {
 
@@ -85,7 +85,7 @@ function getFactors( $number ) {
 echo "<pre>";
 
 // Limit of brute force attempt.
-$limit = 1000;
+$limit = 1000000;
 
 // Number of divisors we are looking for.
 $divisors = 500;
