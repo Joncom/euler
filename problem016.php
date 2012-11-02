@@ -20,8 +20,8 @@ $Start = getTime();
 /
 / What is the sum of the digits of the number 2^1000?
 /
-/ Solution: ?
-/ Running-time: ?
+/ Solution: 1366
+/ Running-time: 0 sec.
 /
 /
 **************************/
