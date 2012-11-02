@@ -97,8 +97,8 @@ $grid = explode( ' ', $grid );
 
 function productRight( $grid, $index, $width ) {
 
-    // Determine if going right will fail.
-    if( ( $index % $width ) + 4 > $width ) return "ILLEGAL!!";
+    // Return -1 if series is invalid.
+    if( ( $index % $width ) + 4 > $width ) return -1;
 
     return $grid[ $index ]
          * $grid[ $index + 1 ]
