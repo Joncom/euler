@@ -138,7 +138,7 @@ function productDown( $grid, $index, $width ) {
     $height = count( $grid ) / $width;
 
     // Return -1 if series is invalid.
-    if( ( floor( $index / $height ) ) + 4 < 0 ) return -1;
+    if( ( floor( $index / $height ) ) + 4 > $height ) return -1;
 
     return $grid[ $index ]
          * $grid[ $index + ( 1 * $width ) ]
