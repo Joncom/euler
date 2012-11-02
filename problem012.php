@@ -67,9 +67,9 @@ function getFactors( $number ) {
 
             array_push( $factors, $factor );
 
+            // Don't add the square root twice.
             if( $factor != $number / $factor ) {
 
-                // Don't add the square root twice.
                 array_push( $factors, $number / $factor );
 
             }
