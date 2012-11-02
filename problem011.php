@@ -150,8 +150,8 @@ function productDown( $grid, $index, $width ) {
 for( $i = 0; $i < count( $grid ); $i++ ) {
 
     echo $grid[ $i ]
-       . " productUp = "
-       . productUp( $grid, $i, $grid_width )
+       . " productDown = "
+       . productDown( $grid, $i, $grid_width )
        . "<br>";
 
 }
