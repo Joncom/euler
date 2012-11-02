@@ -148,6 +148,21 @@ function productUpRight( $grid, $index, $width ) {
 
 }
 
+function productUpLeft( $grid, $index, $width ) {
+
+    $height = count( $grid ) / $width;
+
+    // Return -1 if series is invalid.
+    if( ( floor( $index / $height ) ) - 3 < 0 ) return -1;
+    if( ( $index % $width ) - 3 < 0 ) return -1;
+
+    return $grid[ $index ]
+         * $grid[ $index - ( 1 * $width ) - 1 ]
+         * $grid[ $index - ( 2 * $width ) - 2 ]
+         * $grid[ $index - ( 3 * $width ) - 3 ];
+
+}
+
 function productDown( $grid, $index, $width ) {
 
     $height = count( $grid ) / $width;
