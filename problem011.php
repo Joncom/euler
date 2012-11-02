@@ -55,8 +55,6 @@ set_time_limit( 30 );
 
 $grid_width = 20;
 
-$grid_height = 20;
-
 // Do work here.
 
 echo "<pre>";
@@ -97,7 +95,29 @@ $grid = explode( ' ', $grid );
 
 //print_r( $grid );
 
-echo "Answer: ";
+function productRight( $grid, $index, $width ) {
+
+    // Determine if going right will fail.
+    if( ( $index % $width ) + 4 > $width ) return "ILLEGAL!!";
+
+    return $grid[ $index ]
+         * $grid[ $index + 1 ]
+         * $grid[ $index + 2 ]
+         * $grid[ $index + 3 ];
+
+}
+
+for( $i = 0; $i < count( $grid ); $i++ ) {
+
+    echo $grid[ $i ]
+       . " productRight = "
+       . productRight( $grid, $i, $grid_width )
+       . "<br>";
+
+}
+
+
+//echo "Answer: ";
 
 echo "</pre>";
 
