@@ -81,12 +81,6 @@ for( $i = 0; $i < strlen( $big_number ) - 4; $i++ ) {
 
     //echo "<";
 
-    for( $j = $i; $j < $i + 5; $j++ ) {
-
-        //echo $big_number[$j];
-
-    }
-
     //echo ">";
 
     //echo "<br>";
