@@ -82,6 +82,9 @@ $grid = "
 // Remove leading and trailing whitespace.
 $grid = trim( $grid );
 
+// Convert grid to an array of individual values.
+$grid = explode( ' ', $grid );
+
 echo "Answer: ";
 
 echo "</pre>";
