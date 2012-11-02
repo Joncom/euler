@@ -100,7 +100,7 @@ for( $i = 0; $i < strlen( $big_number ) - 4; $i++ ) {
 
 }
 
-echo $biggest_product;
+echo "Answer: $biggest_product";
 
 echo "</pre>";
 
