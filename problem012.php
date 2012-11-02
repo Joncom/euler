@@ -66,9 +66,7 @@ echo "<pre>";
 // Number of divisors we are looking for.
 $divisors = 500;
 
-$triangle = 1;
-
-for( $i = 1; divisorCount( $triangle ) <= $divisors; $i++, $triangle += $i );
+for( $i = 1, $triangle = 1; divisorCount( $triangle ) <= $divisors; $i++, $triangle += $i );
 
 echo "Answer: $triangle is the first triangle number "
    . "to have over $divisors divisors.";
