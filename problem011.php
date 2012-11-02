@@ -107,6 +107,18 @@ function productRight( $grid, $index, $width ) {
 
 }
 
+function productLeft( $grid, $index, $width ) {
+
+    // Return -1 if series is invalid.
+    if( ( $index % $width ) - 4 < 0 ) return -1;
+
+    return $grid[ $index ]
+         * $grid[ $index - 1 ]
+         * $grid[ $index - 2 ]
+         * $grid[ $index - 3 ];
+
+}
+
 for( $i = 0; $i < count( $grid ); $i++ ) {
 
     echo $grid[ $i ]
