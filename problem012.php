@@ -110,8 +110,6 @@ for( $i = 1; $i < $limit; $i++ ) {
 
     }
 
-    //echo getTriangleNumber( $i ) . "<br>";
-
 }
 
 echo "</pre>";
