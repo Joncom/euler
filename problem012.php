@@ -63,7 +63,7 @@ function divisorCount( $number ) {
 
 echo "<pre>";
 
-// Number of divisors we are looking for.
+// Number of divisors we are looking to exceed.
 $divisors = 500;
 
 for( $i = 1, $triangle = 1; divisorCount( $triangle ) <= $divisors; $i++, $triangle += $i );
