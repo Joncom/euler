@@ -23,7 +23,6 @@ $Start = getTime();
 / Solution: ?
 / Running-time: ?
 /
-/ The following solution requires PHP GMP.
 /
 **************************/
 
@@ -34,7 +33,7 @@ set_time_limit( 30 );
 echo "<pre>";
 
 // String value of digits for the number 2^1000.
-$digits = gmp_strval( gmp_pow( 2, 1000 ) );
+$digits = bcpow( 2, 1000 );
 
 $sum = 0;
 
