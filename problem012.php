@@ -86,20 +86,33 @@ function getFactors( $number ) {
 
 echo "<pre>";
 
-$answer = 0;
-
+// Limit of brute force attempt.
 $limit = 1000;
+
+// Number of divisors we are looking for.
+$divisors = 500;
 
 for( $i = 1; $i < $limit; $i++ ) {
 
     // Search for first triangle number to have
     // over five hundred divisors here.
 
+    $triangle_number = getTriangleNumber( $i );
+
+    $factors = getFactors( $triangle_number );
+
+    if( count( $factors ) > $divisors ) {
+
+        echo "Answer: $i is the value of the first triable number "
+           . "to have over $divisors divisors.";
+
+        break;
+
+    }
+
     //echo getTriangleNumber( $i ) . "<br>";
 
 }
-
-echo "Answer: $answer";
 
 echo "</pre>";
 
