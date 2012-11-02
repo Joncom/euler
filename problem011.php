@@ -133,6 +133,20 @@ function productUp( $grid, $index, $width ) {
 
 }
 
+function productDown( $grid, $index, $width ) {
+
+    $height = count( $grid ) / $width;
+
+    // Return -1 if series is invalid.
+    if( ( floor( $index / $height ) ) + 4 < 0 ) return -1;
+
+    return $grid[ $index ]
+         * $grid[ $index + ( 1 * $width ) ]
+         * $grid[ $index + ( 2 * $width ) ]
+         * $grid[ $index + ( 3 * $width ) ];
+
+}
+
 for( $i = 0; $i < count( $grid ); $i++ ) {
 
     echo $grid[ $i ]
