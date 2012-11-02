@@ -39,7 +39,7 @@ $Start = getTime();
 / to have over five hundred divisors?
 /
 / Solution: 76576500
-/ Running-time: ~22 secs
+/ Running-time: ~10 secs
 /
 **************************/
 
