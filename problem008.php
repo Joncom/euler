@@ -76,6 +76,9 @@ for( $i = 0; $i < strlen( $big_number ) - 4; $i++ ) {
 
     $product = $i * ( $i + 1 ) * ( $i + 2 ) * ( $i + 3 ) * ( $i + 4 );
 
+    // Only keep the biggest value.
+    if( $product > $biggest_product ) $biggest_product = $product;
+
     //echo "<";
 
     for( $j = $i; $j < $i + 5; $j++ ) {
