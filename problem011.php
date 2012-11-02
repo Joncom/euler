@@ -53,6 +53,10 @@ $Start = getTime();
 
 set_time_limit( 30 );
 
+$grid_width = 20;
+
+$grid_height = 20;
+
 // Do work here.
 
 echo "<pre>";
