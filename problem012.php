@@ -61,7 +61,16 @@ echo "<pre>";
 
 $answer = 0;
 
+$limit = 1000;
 
+for( $i = 1; $i < $limit; $i++ ) {
+
+    // Search for first triangle number to have
+    // over five hundred divisors here.
+
+    //echo getTriangleNumber( $i ) . "<br>";
+
+}
 
 echo "Answer: $answer";
 
