@@ -40,6 +40,8 @@ $sum = 0;
 
 for( $i = 0; $i < strlen( $digits ); $i++  ) $sum += $digits[ $i ];
 
+echo "Answer: $sum";
+
 echo "</pre>";
 
 ?>
