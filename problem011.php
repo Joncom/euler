@@ -223,7 +223,7 @@ for( $i = 0; $i < count( $grid ); $i++ ) {
 }
 
 
-//echo "Answer: ";
+echo "Answer: $answer";
 
 echo "</pre>";
 
