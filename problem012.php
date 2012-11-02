@@ -45,11 +45,23 @@ $Start = getTime();
 
 set_time_limit(30);
 
+function getTriangleNumber( $n ) {
+
+    $sum = 0;
+
+    for( $i = 1; $i <= $n; $i++ ) $sum += $i;
+
+    return $sum;
+
+}
+
 // Do work here.
 
 echo "<pre>";
 
 $answer = 0;
+
+
 
 echo "Answer: $answer";
 
