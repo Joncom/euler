@@ -49,7 +49,7 @@ function divisorCount( $number ) {
 
     $count = 0;
 
-    $limit = floor( sqrt( $number ) );
+    $limit = sqrt( $number );
 
     for( $i = 1; $i <= $limit; $i ++) {
 
