@@ -82,8 +82,13 @@ $grid = "
 // Remove leading and trailing whitespace.
 $grid = trim( $grid );
 
+// Remove new lines.
+$grid = preg_replace( "/[\n\r]/", ' ', $grid );
+
 // Convert grid to an array of individual values.
 $grid = explode( ' ', $grid );
+
+print_r( $grid );
 
 echo "Answer: ";
 
