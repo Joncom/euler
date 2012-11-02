@@ -76,9 +76,18 @@ echo "<pre>";
 
 for( $i = 0; $i < strlen( $big_number ) - 4; $i++ ) {
 
-    $product = $i * ( $i + 1 ) * ( $i + 2 ) * ( $i + 3 ) * ( $i + 4 );
+    $product = $big_number[ $i ]
+             * $big_number[ $i + 1 ]
+             * $big_number[ $i + 2 ]
+             * $big_number[ $i + 3 ]
+             * $big_number[ $i + 4 ];
 
-    echo "Digits: " . $i . ( $i + 1 ) . ( $i + 2 ) . ( $i + 3 ) . ( $i + 4 );
+    echo "Digits: "
+       . $big_number[ $i ]
+       . $big_number[ $i + 1 ]
+       . $big_number[ $i + 2 ]
+       . $big_number[ $i + 3 ]
+       . $big_number[ $i + 4 ];
 
     echo " ";
 
