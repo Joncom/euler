@@ -55,6 +55,30 @@ function getTriangleNumber( $n ) {
 
 }
 
+function getFactorCount( $number ) {
+
+    $factor_count = 0;
+
+    $max = floor( sqrt( $number ) );
+
+    for( $factor = 1; $factor <= $max; $factor++ ) {
+
+        if( $number % $factor == 0 ) {
+
+            $factor_count++;
+
+            // Don't add the square root twice.
+            if( $factor != $number / $factor ) $factor_count++;
+
+        }
+
+    }
+
+    return $factor_count;
+
+}
+
+/*
 function getFactors( $number ) {
 
     $factors = array();
@@ -81,6 +105,7 @@ function getFactors( $number ) {
     return $factors;
 
 }
+*/
 
 echo "<pre>";
 
@@ -94,9 +119,7 @@ for( $i = 1; $i < $limit; $i++ ) {
 
     $triangle_number = getTriangleNumber( $i );
 
-    $factors = getFactors( $triangle_number );
-
-    if( count( $factors ) > $divisors ) {
+    if( getFactorCount( $triangle_number ) > $divisors ) {
 
         echo "Answer: $triangle_number is the first triangle number "
            . "to have over $divisors divisors.";
