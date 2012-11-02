@@ -82,19 +82,6 @@ for( $i = 0; $i < strlen( $big_number ) - 4; $i++ ) {
              * $big_number[ $i + 3 ]
              * $big_number[ $i + 4 ];
 
-    echo "Digits: "
-       . $big_number[ $i ]
-       . $big_number[ $i + 1 ]
-       . $big_number[ $i + 2 ]
-       . $big_number[ $i + 3 ]
-       . $big_number[ $i + 4 ];
-
-    echo " ";
-
-    echo "Product: " . $product;
-
-    echo "<br>";
-
     // Only keep the biggest value.
     if( $product > $biggest_product ) $biggest_product = $product;
 
