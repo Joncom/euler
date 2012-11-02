@@ -43,92 +43,35 @@ $Start = getTime();
 /
 **************************/
 
-set_time_limit( 60 * 60 ); // 1 hr
+set_time_limit( 30 );
 
-function getTriangleNumber( $n ) {
+function divisorCount( $number ) {
 
-    $sum = 0;
+    $count = 0;
 
-    for( $i = 1; $i <= $n; $i++ ) $sum += $i;
+    $limit = floor( sqrt( $number ) );
 
-    return $sum;
+    for( $i = 1; $i <= $limit; $i ++) {
 
-}
-
-function getFactorCount( $number ) {
-
-    $factor_count = 0;
-
-    $max = floor( sqrt( $number ) );
-
-    for( $factor = 1; $factor <= $max; $factor++ ) {
-
-        if( $number % $factor == 0 ) {
-
-            $factor_count++;
-
-            // Don't add the square root twice.
-            if( $factor != $number / $factor ) $factor_count++;
-
-        }
+        if( $number % $i == 0 ) $count++;
 
     }
 
-    return $factor_count;
+    return $count * 2;
 
 }
-
-/*
-function getFactors( $number ) {
-
-    $factors = array();
-
-    $max = floor( sqrt( $number ) );
-
-    for( $factor = 1; $factor <= $max; $factor++ ) {
-
-        if( $number % $factor == 0 ) {
-
-            array_push( $factors, $factor );
-
-            // Don't add the square root twice.
-            if( $factor != $number / $factor ) {
-
-                array_push( $factors, $number / $factor );
-
-            }
-
-        }
-
-    }
-
-    return $factors;
-
-}
-*/
 
 echo "<pre>";
-
-// Limit of brute force attempt.
-$limit = 1000000;
 
 // Number of divisors we are looking for.
 $divisors = 500;
 
-for( $i = 1; $i < $limit; $i++ ) {
+$triangle = 1;
 
-    $triangle_number = getTriangleNumber( $i );
+for( $i = 1; divisorCount( $triangle ) <= $divisors; $i++, $triangle += $i );
 
-    if( getFactorCount( $triangle_number ) > $divisors ) {
-
-        echo "Answer: $triangle_number is the first triangle number "
-           . "to have over $divisors divisors.";
-
-        break;
-
-    }
-
-}
+echo "Answer: $triangle is the first triangle number "
+   . "to have over $divisors divisors.";
 
 echo "</pre>";
 
