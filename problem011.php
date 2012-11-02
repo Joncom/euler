@@ -186,9 +186,9 @@ function productDownLeft( $grid, $index, $width ) {
     if( ( $index % $width ) - 3 < 0 ) return -1;
 
     return $grid[ $index ]
-         * $grid[ $index + ( 1 * $width ) -1 ]
-         * $grid[ $index + ( 2 * $width ) -2 ]
-         * $grid[ $index + ( 3 * $width ) -3 ];
+         * $grid[ $index + ( 1 * $width ) - 1 ]
+         * $grid[ $index + ( 2 * $width ) - 2 ]
+         * $grid[ $index + ( 3 * $width ) - 3 ];
 
 }
 
