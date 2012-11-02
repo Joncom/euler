@@ -38,8 +38,8 @@ $Start = getTime();
 / What is the value of the first triangle number
 / to have over five hundred divisors?
 /
-/ Solution: ?
-/ Running-time: ?
+/ Solution: 76576500
+/ Running-time: ~22 secs
 /
 **************************/
 
