@@ -72,22 +72,28 @@ $big_number = "73167176531330624919225119674426574742355349194934"
 // Store the largest product of 5-digits.
 $biggest_product = 0;
 
+echo "<pre>";
+
 for( $i = 0; $i < strlen( $big_number ) - 4; $i++ ) {
 
     $product = $i * ( $i + 1 ) * ( $i + 2 ) * ( $i + 3 ) * ( $i + 4 );
 
+    echo "Digits: " . $i . ( $i + 1 ) . ( $i + 2 ) . ( $i + 3 ) . ( $i + 4 );
+
+    echo " ";
+
+    echo "Product: " . $product;
+
+    echo "<br>";
+
     // Only keep the biggest value.
     if( $product > $biggest_product ) $biggest_product = $product;
-
-    //echo "<";
-
-    //echo ">";
-
-    //echo "<br>";
 
 }
 
 echo $biggest_product;
+
+echo "</pre>";
 
 ?>
 
