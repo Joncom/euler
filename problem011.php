@@ -207,6 +207,9 @@ function productDownLeft( $grid, $index, $width ) {
 
 }
 
+// Greatest product of four adjacent numbers.
+$answer = -1;
+
 for( $i = 0; $i < count( $grid ); $i++ ) {
 
     echo $grid[ $i ]
