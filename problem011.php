@@ -212,13 +212,37 @@ $answer = -1;
 
 for( $i = 0; $i < count( $grid ); $i++ ) {
 
-    echo $grid[ $i ]
-       . " productDown = "
-       . productDown( $grid, $i, $grid_width )
-       . "<br>";
+    $product = productUp( $grid, $i, $grid_width );
 
-    // Extra break if new row.
-    if( $i % $grid_width == $grid_width - 1 ) echo "<br>";
+    if( $product > $answer ) $answer = $product;
+
+    $product = productRight( $grid, $i, $grid_width );
+
+    if( $product > $answer ) $answer = $product;
+
+    $product = productDown( $grid, $i, $grid_width );
+
+    if( $product > $answer ) $answer = $product;
+
+    $product = productLeft( $grid, $i, $grid_width );
+
+    if( $product > $answer ) $answer = $product;
+
+    $product = productUpRight( $grid, $i, $grid_width );
+
+    if( $product > $answer ) $answer = $product;
+
+    $product = productUpLeft( $grid, $i, $grid_width );
+
+    if( $product > $answer ) $answer = $product;
+
+    $product = productDownRight( $grid, $i, $grid_width );
+
+    if( $product > $answer ) $answer = $product;
+
+    $product = productDownLeft( $grid, $i, $grid_width );
+
+    if( $product > $answer ) $answer = $product;
 
 }
 
