@@ -98,7 +98,7 @@ for( $i = 1; $i < $limit; $i++ ) {
 
     if( count( $factors ) > $divisors ) {
 
-        echo "Answer: $i is the value of the first triable number "
+        echo "Answer: $triangle_number is the first triable number "
            . "to have over $divisors divisors.";
 
         break;
