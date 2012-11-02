@@ -154,6 +154,9 @@ for( $i = 0; $i < count( $grid ); $i++ ) {
        . productDown( $grid, $i, $grid_width )
        . "<br>";
 
+    // Extra break if new row.
+    if( $i % $grid_width == $grid_width - 1 ) echo "<br>";
+
 }
 
 
