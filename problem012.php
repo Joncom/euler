@@ -55,6 +55,33 @@ function getTriangleNumber( $n ) {
 
 }
 
+function getFactors( $number ) {
+
+    $factors = array();
+
+    $max = floor( sqrt( $number ) );
+
+    for( $factor = 1; $factor <= $max; $factor++ ) {
+
+        if( $number % $factor == 0 ) {
+
+            array_push( $factors, $factor );
+
+            if( $factor != $number / $factor ) {
+
+                // Don't add the square root twice.
+                array_push( $factors, $number / $factor );
+
+            }
+
+        }
+
+    }
+
+    return $factors;
+
+}
+
 // Do work here.
 
 echo "<pre>";
