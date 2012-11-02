@@ -85,6 +85,9 @@ $grid = trim( $grid );
 // Remove new lines.
 $grid = preg_replace( "/[\n\r]/", ' ', $grid );
 
+// Max of 1 space.
+$grid = preg_replace('!\s+!', ' ', $grid );
+
 // Convert grid to an array of individual values.
 $grid = explode( ' ', $grid );
 
