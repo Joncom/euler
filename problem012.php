@@ -107,8 +107,6 @@ for( $i = 1; $i < $limit; $i++ ) {
 
 }
 
-//print_r( getFactors( 1651654 ) );
-
 echo "</pre>";
 
 ?>
