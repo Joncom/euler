@@ -82,8 +82,6 @@ function getFactors( $number ) {
 
 }
 
-// Do work here.
-
 echo "<pre>";
 
 // Limit of brute force attempt.
