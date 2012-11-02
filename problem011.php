@@ -124,12 +124,12 @@ function productUp( $grid, $index, $width ) {
     $height = count( $grid ) / $width;
 
     // Return -1 if series is invalid.
-    if( ( $index % $width ) - 3 < 0 ) return -1;
+    if( ( $index % $height ) - 3 < 0 ) return -1;
 
     return $grid[ $index ]
-         * $grid[ $index - 1 ]
-         * $grid[ $index - 2 ]
-         * $grid[ $index - 3 ];
+         * $grid[ $index - ( 1 * $width ) ]
+         * $grid[ $index - ( 2 * $width ) ]
+         * $grid[ $index - ( 3 * $width ) ];
 
 }
 
