@@ -45,8 +45,8 @@ $Start = getTime();
 / direction (up, down, left, right, / or diagonally) in the
 / 20 x 20 grid?
 /
-/ Solution: ?
-/ Running-time: ?
+/ Solution: 70600674
+/ Running-time: 0.01 secs
 /
 /
 **************************/
