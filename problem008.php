@@ -71,17 +71,17 @@ $big_number = "73167176531330624919225119674426574742355349194934"
 
 for( $i = 0; $i < strlen( $big_number ) - 4; $i++ ) {
 
-    echo "<";
+    //echo "<";
 
     for( $j = $i; $j < $i + 5; $j++ ) {
 
-        echo $big_number[$j];
+        //echo $big_number[$j];
 
     }
 
-    echo ">";
+    //echo ">";
 
-    echo "<br>";
+    //echo "<br>";
 
 }
 
