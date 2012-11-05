@@ -21,50 +21,30 @@ $Start = getTime();
 /
 / How many routes are there through a 20x20 grid?
 /
-/ Solution: ?
-/ Running-time: ?
+/ Solution: 137846528820
+/ Running-time: 0.03 secs
 /
 **************************/
 
-set_time_limit(60*60*4); // 4 hrs.
+set_time_limit(30);
 
-function countRoutes( $grid_width, $grid_height, $x = 0, $y = 0 ) {
-
-    // Reached the end?
-    if( $x == $grid_width && $y == $grid_height ) {
-
-        return 1;
-
-    }
-
-    $local_count = 0;
-
-    // Try Right.
-    if( $x < $grid_width ) {
-
-        $local_count += countRoutes( $grid_width, $grid_height, $x + 1, $y );
-
-    }
-
-    // Try Down.
-    if( $y < $grid_height ) {
-
-        $local_count += countRoutes( $grid_width, $grid_height, $x, $y + 1 );
-
-    }
-
-    return $local_count;
-
+/*
+ * Computes the factoral (x!).
+ * @author Thomas Oldbury.
+ * @license Public domain.
+ */
+function bcfact($fact, $scale = 100)
+{
+    if($fact == 1) return 1;
+    return bcmul($fact, bcfact(bcsub($fact, '1'), $scale), $scale);
 }
 
 $grid_width = 20;
 $grid_height = 20;
 
-// Possible route count?
-$answer = countRoutes( $grid_width, $grid_height );
+$answer = bcfact( $grid_width + $grid_height ) / ( bcfact( $grid_width ) * bcfact( $grid_height ) );
 
-echo $answer . " routes.";
-
+echo $answer . ' routes.';
 
 ?>
 
