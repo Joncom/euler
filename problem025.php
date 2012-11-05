@@ -44,11 +44,36 @@ $Start = getTime();
 
 set_time_limit( 30 );
 
-// Do work here.
+$digit_goal = 1000;
+
+// We are actually starting on the fourth term since we are
+// saying 1 and 2 were the last two numbers.
+$count = 4;
 
 echo "<pre>";
 
-echo "Answer: ";
+$last_two_numbers = array( 1, 2 );
+
+while(true) {
+
+	$next_term = bcadd( $last_two_numbers[0], $last_two_numbers[1] );
+
+	echo "$count: Last two numbers were "  . $last_two_numbers[0]
+	   . ", and " . $last_two_numbers[1]
+	   . " which makes " . $next_term
+	   . "<br><br>";
+
+	if( strlen( $next_term ) >= $digit_goal ) break;
+
+	$last_two_numbers[0] = $last_two_numbers[1];
+
+	$last_two_numbers[1] = $next_term;
+
+	$count++;
+
+}
+
+echo "Term $count is the first to contain $digit_goal digits.";
 
 echo "</pre>";
 
