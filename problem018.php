@@ -42,8 +42,8 @@ $Start = getTime();
 /   63 66 04 68 89 53 67 30 73 16 69 87 40 31
 / 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23
 /
-/ Solution:
-/ Running-time:
+/ Solution: 1074
+/ Running-time: 0.13 secs
 /
 /
 **************************/
@@ -94,7 +94,7 @@ function highestSum( $triangle, $row = 0, $column = 0, $sum = 0 ) {
 
 }
 
-echo "Answer: ";
+echo "Answer: " . highestSum( $triangle );
 
 echo "</pre>";
 
