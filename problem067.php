@@ -40,7 +40,7 @@ set_time_limit( 30 );
 echo "<pre>";
 
 // Get triangle as a string from file.
-$triangle = file_get_contents( 'problem067_triangle.txt' );
+$triangle = trim( file_get_contents( 'problem067_triangle.txt' ) );
 
 // Break up triangle into rows.
 $triangle = explode( "\n", $triangle );
