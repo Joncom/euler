@@ -80,6 +80,20 @@ for( $i = 0; $i < count( $triangle ); $i++ ) {
 
 //print_r( $triangle );
 
+function highestSum( $triangle, $row = 0, $column = 0, $sum = 0 ) {
+
+	if( $row == count( $triangle ) ) return $sum;
+
+	$sum += $triangle[ $row ][ $column ];
+
+	$left = highestSum( $triangle, $row + 1, $column, $sum );
+
+	$right = highestSum( $triangle, $row + 1, $column + 1, $sum );
+
+	return ( $left > $right ? $left : $right );
+
+}
+
 echo "Answer: ";
 
 echo "</pre>";
