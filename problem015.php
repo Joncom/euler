@@ -28,7 +28,7 @@ $Start = getTime();
 
 set_time_limit(300);
 
-function countRoutes( $x, $y, $grid_width, $grid_height ) {
+function countRoutes( $grid_width, $grid_height, $x = 0, $y = 0 ) {
 
     // Reached the end?
     if( $x == $grid_width && $y == $grid_height ) {
@@ -42,14 +42,14 @@ function countRoutes( $x, $y, $grid_width, $grid_height ) {
     // Try Right.
     if( $x < $grid_width ) {
 
-        $local_count += countRoutes( $x + 1, $y, $grid_width, $grid_height );
+        $local_count += countRoutes( $grid_width, $grid_height, $x + 1, $y );
 
     }
 
     // Try Down.
     if( $y < $grid_height ) {
 
-        $local_count += countRoutes( $x, $y + 1, $grid_width, $grid_height );
+        $local_count += countRoutes( $grid_width, $grid_height, $x, $y + 1 );
 
     }
 
@@ -57,11 +57,11 @@ function countRoutes( $x, $y, $grid_width, $grid_height ) {
 
 }
 
-$grid_width = 20;
-$grid_height = 20;
+$grid_width = 4;
+$grid_height = 5;
 
 // Possible route count?
-$answer = countRoutes( 0, 0, $grid_width, $grid_height );
+$answer = countRoutes( $grid_width, $grid_height );
 
 echo $answer . " routes.";
 
