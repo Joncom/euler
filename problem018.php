@@ -78,8 +78,6 @@ for( $i = 0; $i < count( $triangle ); $i++ ) {
 
 }
 
-//print_r( $triangle );
-
 function highestSum( $triangle, $row = 0, $column = 0, $sum = 0 ) {
 
 	if( $row == count( $triangle ) ) return $sum;
