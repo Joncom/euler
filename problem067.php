@@ -29,8 +29,8 @@ $Start = getTime();
 / Find the maximum total from top to bottom in triangle.txt,
 / a file containing a triangle with one-hundred rows.
 /
-/ Solution:
-/ Running-time:
+/ Solution: 7273
+/ Running-time: 0.01 secs
 /
 /
 **************************/
@@ -51,10 +51,6 @@ for( $i = 0; $i < count( $triangle ); $i++ ) {
 	$triangle[ $i ] = explode( " ", $triangle[ $i ] );
 
 }
-
-print_r( $triangle );
-
-die();
 
 // From bottom up, starting at the second last row.
 for( $row = count( $triangle ) - 2; $row >= 0; $row-- ) {
