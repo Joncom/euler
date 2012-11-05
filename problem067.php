@@ -52,8 +52,30 @@ for( $i = 0; $i < count( $triangle ); $i++ ) {
 
 }
 
+print_r( $triangle );
 
-echo "Answer: ";
+die();
+
+// From bottom up, starting at the second last row.
+for( $row = count( $triangle ) - 2; $row >= 0; $row-- ) {
+
+	for( $column = 0; $column < count( $triangle[ $row ] ); $column++ ) {
+
+		$largest_adjacent_child = max(
+
+			$triangle[ $row + 1 ][ $column ],
+
+			$triangle[ $row + 1 ][ $column + 1 ]
+
+		);
+
+		$triangle[ $row ][ $column ] += $largest_adjacent_child;
+
+	}
+
+}
+
+echo "Answer: " . $triangle[0][0];
 
 echo "</pre>";
 
