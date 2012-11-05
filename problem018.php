@@ -1,4 +1,14 @@
 <?php
+/*
+
+NOTE: Problem 67 is very similar but not susceptible to
+brute force (which I used here). Check there for a more
+elegant solution.
+
+*/
+?>
+
+<?php
 function getTime()
     {
     $a = explode (' ',microtime());
