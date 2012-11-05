@@ -26,7 +26,7 @@ $Start = getTime();
 /
 **************************/
 
-set_time_limit(300);
+set_time_limit(60*60*4); // 4 hrs.
 
 function countRoutes( $grid_width, $grid_height, $x = 0, $y = 0 ) {
 
@@ -57,8 +57,8 @@ function countRoutes( $grid_width, $grid_height, $x = 0, $y = 0 ) {
 
 }
 
-$grid_width = 4;
-$grid_height = 5;
+$grid_width = 20;
+$grid_height = 20;
 
 // Possible route count?
 $answer = countRoutes( $grid_width, $grid_height );
