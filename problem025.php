@@ -36,8 +36,8 @@ $Start = getTime();
 /
 / What is the first term in the Fibonacci sequence to contain 1000 digits?
 /
-/ Solution:
-/ Running-time:
+/ Solution: 4782
+/ Running-time: 0.46 secs
 /
 /
 **************************/
