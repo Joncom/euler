@@ -45,49 +45,49 @@ echo "<pre>";
 
 function lexicographicPermute( $string ) {
 
-	$length = strlen( $string );
+    $length = strlen( $string );
 
-	// 1.
-	// Find the largest index k such that a[k] < a[k + 1].
-	// If no such index exists, the permutation is the last permutation.
-	for( $i = 0; $i < $length - 1; $i++ ) {
+    // 1.
+    // Find the largest index k such that a[k] < a[k + 1].
+    // If no such index exists, the permutation is the last permutation.
+    for( $i = 0; $i < $length - 1; $i++ ) {
 
-		if( strcmp( $string[ $i ], $string[ $i + 1 ] ) < 0 ) $k = $i;
+        if( strcmp( $string[ $i ], $string[ $i + 1 ] ) < 0 ) $k = $i;
 
-	}
+    }
 
-	if( !isset( $k ) ) die("Last permutation.");
+    if( !isset( $k ) ) die("Last permutation.");
 
-	// 2.
-	// Find the largest index l such that a[k] < a[l].
-	// Since k + 1 is such an index, l is well defined and satisfies k < l.
-	for( $i = $k + 1; $i < $length; $i++ ) {
+    // 2.
+    // Find the largest index l such that a[k] < a[l].
+    // Since k + 1 is such an index, l is well defined and satisfies k < l.
+    for( $i = $k + 1; $i < $length; $i++ ) {
 
-		if( strcmp( $string[ $k ], $string[ $i ] ) < 0 ) $l = $i;
+        if( strcmp( $string[ $k ], $string[ $i ] ) < 0 ) $l = $i;
 
-	}
+    }
 
-	if( !isset( $l ) ) die("Should never happen.");
+    if( !isset( $l ) ) die("Should never happen.");
 
-	// 3.
-	// Swap a[k] with a[l].
-	$temp = $string[ $k ];
-	$string[ $k ] = $string[ $l ];
-	$string[ $l ] = $temp;
+    // 3.
+    // Swap a[k] with a[l].
+    $temp = $string[ $k ];
+    $string[ $k ] = $string[ $l ];
+    $string[ $l ] = $temp;
 
-	// 4.
-	// Reverse the sequence from a[k + 1] up to and including the final element a[n].
+    // 4.
+    // Reverse the sequence from a[k + 1] up to and including the final element a[n].
 
-	// Part to be replaced.
-	$needle = substr( $string, $k + 1 );
+    // Part to be replaced.
+    $needle = substr( $string, $k + 1 );
 
-	$new_sequence = strrev( $needle );
+    $new_sequence = strrev( $needle );
 
-	$new_string = str_replace( $needle, $new_sequence, $string );
+    $new_string = str_replace( $needle, $new_sequence, $string );
 
-	// Permutation done.
+    // Permutation done.
 
-	return $new_string;
+    return $new_string;
 
 }
 
@@ -95,7 +95,7 @@ $str = "0123456789";
 
 for( $i = 1; $i < 1000000; $i++ ) {
 
-	$str = lexicographicPermute($str);
+    $str = lexicographicPermute($str);
 
 }
 
