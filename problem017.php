@@ -29,8 +29,8 @@ $Start = getTime();
 / 20 letters. The use of "and" when writing out
 / numbers is in compliance with British usage.
 /
-/ Solution:
-/ Running-time:
+/ Solution: 21124
+/ Running-time: 0.10 secs
 /
 /
 **************************/
