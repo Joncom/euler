@@ -50,6 +50,9 @@ for( $number = 1; $number <= 1000; $number++ ) {
 
 }
 
+// Strip spaces.
+$all_numbers = preg_replace("/\s/", '', $all_numbers);
+
 echo "Answer: ";
 
 echo "</pre>";
