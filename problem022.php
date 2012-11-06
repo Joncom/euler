@@ -28,8 +28,8 @@ $Start = getTime();
 /
 / What is the total of all the name scores in the file?
 /
-/ Solution: ?
-/ Running-time: ?
+/ Solution: 871198282
+/ Running-time: 0.07 secs
 /
 /
 **************************/
