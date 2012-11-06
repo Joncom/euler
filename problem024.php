@@ -52,7 +52,7 @@ function lexicographicPermute( $string ) {
 	// If no such index exists, the permutation is the last permutation.
 	for( $i = 0; $i < $length - 1; $i++ ) {
 
-		if( $string[ $i ] < $string[ $i + 1 ] ) $k = $i;
+		if( strcmp( $string[ $i ], $string[ $i + 1 ] ) < 0 ) $k = $i;
 
 	}
 
