@@ -29,9 +29,20 @@ $Start = getTime();
 
 set_time_limit( 30 );
 
+$sum = 0;
+
+for( $i = 1; $i <= 1000; $i++ ) {
+
+	$sum = bcadd( $sum, bcpow( $i, $i ) );
+
+}
+
+// Last 10 digits.
+$answer = substr( $sum, -10 );
+
 echo "<pre>";
 
-echo "Answer: ";
+echo "Answer: $answer";
 
 echo "</pre>";
 
