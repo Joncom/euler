@@ -68,6 +68,8 @@ $skip = array();
 
 for( $i = 0; $i < 10000; $i++ ) {
 
+    if( isset( $skip[ $i ] ) ) continue;
+
     // A potential pair amicable number.
     $pair = sumProperDivisors( $i );
 
@@ -82,15 +84,10 @@ for( $i = 0; $i < 10000; $i++ ) {
 
     if( $amicable ) {
 
-        // i and pair are amicable.
-
-        // Only need to search for i because it can be assumed
-        // that the pair will always be present.
-        if( in_array( $i, $skip ) ) continue;
-
         $sum += ( $i + $pair );
 
-        array_push( $skip, $i, $pair );
+        // Don't count these numbers again.
+        $skip[ $i ] = $skip[ $pair ] = true;
 
     }
 
