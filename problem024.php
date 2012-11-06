@@ -74,8 +74,6 @@ function swap(&$str,$i,$j) {
 $str = "0123456789";
 permute($str,0,strlen($str)); // call the function.
 
-//print_r($permutations);
-
 sort($permutations);
 
 echo "Answer: " . $permutations[ $index ];
