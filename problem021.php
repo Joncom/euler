@@ -61,9 +61,29 @@ function sumProperDivisors( $number ) {
 
 echo "<pre>";
 
-//print_r( sumProperDivisors( 220 ) );
+$sum = 0;
 
-//echo "Answer: ";
+// Numbers which have been taken into account already.
+$skip = array();
+
+for( $i = 0; $i < 10000; $i++ ) {
+
+    // A potential pair amicable number.
+    $pair = sumProperDivisors( $i );
+
+    if( $i == sumProperDivisors( $pair ) ) {
+
+        // i and pair are amicable.
+
+        $sum += ( $i + $pair );
+
+        array_push( $skip, $i, $pair );
+
+    }
+
+}
+
+echo "Answer: $sum";
 
 echo "</pre>";
 
