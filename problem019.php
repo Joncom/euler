@@ -59,7 +59,7 @@ for( $year = 1901; $year <= 2000; $year++ ) {
 
 }
 
-echo "Answer: ";
+echo "Answer: $sunday_count";
 
 echo "</pre>";
 
