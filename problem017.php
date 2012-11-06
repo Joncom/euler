@@ -56,9 +56,7 @@ $all_numbers = preg_replace("/\s/", '', $all_numbers);
 // Strip dashes.
 $all_numbers = preg_replace("/-/", '', $all_numbers);
 
-echo $all_numbers;
-
-//echo "Answer: ";
+echo "Answer: " . strlen( $all_numbers );
 
 echo "</pre>";
 
