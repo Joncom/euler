@@ -56,7 +56,7 @@ function lexicographicPermute( $string ) {
 
 	}
 
-	if( isset( $k ) ) die("Last permutation.");
+	if( !isset( $k ) ) die("Last permutation.");
 
 	// 2.
 	// Find the largest index l such that a[k] < a[l].
@@ -67,7 +67,7 @@ function lexicographicPermute( $string ) {
 
 	}
 
-	if( isset( $l ) ) die("Should never happen.");
+	if( !isset( $l ) ) die("Should never happen.");
 
 	// 3.
 	// Swap a[k] with a[l].
