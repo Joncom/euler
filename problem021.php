@@ -75,7 +75,7 @@ for( $i = 0; $i < 10000; $i++ ) {
 
     $pair_pair = sumProperDivisors( $pair );
 
-    $amicable = ( $i == $pair_pair );
+    $amicable = ( $i == $pair_pair && $i != $pair );
 
     echo ( $amicable ? "<b>" : "" )
        . "d($i) = $pair, and d($pair) = $pair_pair."
