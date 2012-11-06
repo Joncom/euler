@@ -86,6 +86,7 @@ for( $i = 0; $i < 10000; $i++ ) {
 
     $pair_pair = sumProperDivisors( $pair );
 
+    // Is i part of an amicable pair?
     $amicable = ( $i == $pair_pair && $i != $pair );
 
     echo ( $amicable ? "<b>" : "" )
