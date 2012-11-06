@@ -36,9 +36,9 @@ $Start = getTime();
 
 set_time_limit( 30 );
 
+// Returns the sum of all proper divisors.
+// Ie. Sum of all integer factors less than the number.
 function sumProperDivisors( $number ) {
-
-    // Get the proper divisors.
 
         $factors = array();
 
