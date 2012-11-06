@@ -42,6 +42,14 @@ require_once( 'problem017_cnumlib.php' );
 
 echo "<pre>";
 
+$all_numbers = '';
+
+for( $number = 1; $number <= 1000; $number++ ) {
+
+	$all_numbers .= convertNumber( $number );
+
+}
+
 echo "Answer: ";
 
 echo "</pre>";
