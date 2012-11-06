@@ -37,6 +37,9 @@ $Start = getTime();
 
 set_time_limit( 30 );
 
+// Used to convert numbers to words.
+require_once( 'problem017_cnumlib.php' );
+
 echo "<pre>";
 
 echo "Answer: ";
