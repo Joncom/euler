@@ -72,8 +72,8 @@ function lexicographicPermute( $string ) {
 	// 3.
 	// Swap a[k] with a[l].
 	$temp = $string[ $k ];
-	$string[ $l ] = $string[ $k ];
-	$string[ $k ] = $temp;
+	$string[ $k ] = $string[ $l ];
+	$string[ $l ] = $temp;
 
 	// 4.
 	// Reverse the sequence from a[k + 1] up to and including the final element a[n].
