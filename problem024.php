@@ -33,11 +33,52 @@ $Start = getTime();
 /
 **************************/
 
-set_time_limit( 30 );
+set_time_limit( 60 * 60 * 3 );
+ini_set('memory_limit','1324M');
+
+$permutations = array();
+
+// The 1,000,000th term.
+$index = 1000000 - 1;
 
 echo "<pre>";
 
-echo "Answer: ";
+// function to generate and print all N! permutations of $str. (N = strlen($str)).
+function permute($str,$i,$n) {
+
+   global $permutations;
+
+   if ($i == $n) {
+
+   		//print "$str\n";
+
+   		array_push( $permutations, $str );
+
+   } else {
+
+        for ($j = $i; $j < $n; $j++) {
+          swap($str,$i,$j);
+          permute($str, $i+1, $n);
+          swap($str,$i,$j); // backtrack.
+       }
+   }
+}
+
+// function to swap the char at pos $i and $j of $str.
+function swap(&$str,$i,$j) {
+    $temp = $str[$i];
+    $str[$i] = $str[$j];
+    $str[$j] = $temp;
+}
+
+$str = "0123456789";
+permute($str,0,strlen($str)); // call the function.
+
+//print_r($permutations);
+
+sort($permutations);
+
+echo "Answer: " . $permutations[ $index ];
 
 echo "</pre>";
 
