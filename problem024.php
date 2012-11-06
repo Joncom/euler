@@ -93,7 +93,8 @@ function lexicographicPermute( $string ) {
 
 $str = "0123456789";
 
-for( $i = 1; $i < 1000000; $i++ ) {
+// 999,999 because str is already considered to be the first permutation.
+for( $i = 0; $i < 999999; $i++ ) {
 
     $str = lexicographicPermute($str);
 
