@@ -47,21 +47,21 @@ $sunday_count = 0;
 
 for( $year = 1901; $year <= 2000; $year++ ) {
 
-	for( $month = 1; $month <= 12; $month++ ) {
+    for( $month = 1; $month <= 12; $month++ ) {
 
-		$date = $month . "/01/" . $year;
+        $date = $month . "/01/" . $year;
 
-		$time = strtotime( $date );
+        $time = strtotime( $date );
 
-		$is_sunday = ( date( 'l', $time ) == "Sunday" );
+        $is_sunday = ( date( 'l', $time ) == "Sunday" );
 
-		echo "$date "
-		   . ( $is_sunday ? 'was a Sunday. ' : '' )
-		   . "<br>";
+        echo "$date "
+           . ( $is_sunday ? 'was a Sunday. ' : '' )
+           . "<br>";
 
-		if( $is_sunday ) $sunday_count++;
+        if( $is_sunday ) $sunday_count++;
 
-	}
+    }
 
 }
 
