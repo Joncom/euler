@@ -36,9 +36,23 @@ $Start = getTime();
 
 set_time_limit( 30 );
 
+// Load names from external file.
+$names = file_get_contents( 'problem022_names.txt' );
+
+// Remove quotation marks.
+$names = str_replace( '"', '', $names );
+
+// Break names into an array.
+$names = explode( ",", $names );
+
+// Sort array alphabetically.
+sort( $names );
+
 echo "<pre>";
 
-echo "Answer: ";
+print_r( $names );
+
+//echo "Answer: ";
 
 echo "</pre>";
 
