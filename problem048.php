@@ -21,8 +21,8 @@ $Start = getTime();
 / Find the last ten digits of the series,
 / 1^1 + 2^2 + 3^3 + ... + 1000^1000.
 /
-/ Solution: ?
-/ Running-time: ?
+/ Solution: 9110846700
+/ Running-time: 3.24 secs
 /
 /
 **************************/
