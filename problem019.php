@@ -43,6 +43,20 @@ set_time_limit( 30 );
 
 echo "<pre>";
 
+$sunday_count = 0;
+
+for( $year = 1901; $year <= 2000; $year++ ) {
+
+	for( $month = 1; $month <= 12; $month++ ) {
+
+		$date = $month . "/01/" . $year;
+
+		echo $date . "<br>";
+
+	}
+
+}
+
 echo "Answer: ";
 
 echo "</pre>";
