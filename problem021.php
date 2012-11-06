@@ -75,6 +75,10 @@ for( $i = 0; $i < 10000; $i++ ) {
 
         // i and pair are amicable.
 
+        // Only need to search for i because it can be assumed
+        // that the pair will always be present.
+        if( in_array( $i, $skip ) ) continue;
+
         $sum += ( $i + $pair );
 
         array_push( $skip, $i, $pair );
