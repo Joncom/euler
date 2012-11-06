@@ -53,7 +53,12 @@ for( $number = 1; $number <= 1000; $number++ ) {
 // Strip spaces.
 $all_numbers = preg_replace("/\s/", '', $all_numbers);
 
-echo "Answer: ";
+// Strip dashes.
+$all_numbers = preg_replace("/-/", '', $all_numbers);
+
+echo $all_numbers;
+
+//echo "Answer: ";
 
 echo "</pre>";
 
