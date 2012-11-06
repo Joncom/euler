@@ -43,40 +43,59 @@ $index = 1000000 - 1;
 
 echo "<pre>";
 
-// function to generate and print all N! permutations of $str. (N = strlen($str)).
-function permute($str,$i,$n) {
+function lexicographicPermute( $string ) {
 
-   global $permutations;
+	$length = strlen( $string );
 
-   if ($i == $n) {
+	// 1.
+	// Find the largest index k such that a[k] < a[k + 1].
+	// If no such index exists, the permutation is the last permutation.
+	for( $i = 0; $i < $length - 1; $i++ ) {
 
-   		//print "$str\n";
+		if( $string[ $i ] < $string[ $i + 1 ] ) $k = $i;
 
-   		array_push( $permutations, $str );
+	}
 
-   } else {
+	if( isset( $k ) ) die("Last permutation.");
 
-        for ($j = $i; $j < $n; $j++) {
-          swap($str,$i,$j);
-          permute($str, $i+1, $n);
-          swap($str,$i,$j); // backtrack.
-       }
-   }
-}
+	// 2.
+	// Find the largest index l such that a[k] < a[l].
+	// Since k + 1 is such an index, l is well defined and satisfies k < l.
+	for( $i = $k + 1; $i < $length; $i++ ) {
 
-// function to swap the char at pos $i and $j of $str.
-function swap(&$str,$i,$j) {
-    $temp = $str[$i];
-    $str[$i] = $str[$j];
-    $str[$j] = $temp;
+		if( $string[ $k ] < $string[ $i ] ) $l = $i;
+
+	}
+
+	if( isset( $l ) ) die("Should never happen.");
+
+	// 3.
+	// Swap a[k] with a[l].
+	$temp = $string[ $k ];
+	$string[ $l ] = $string[ $k ];
+	$string[ $k ] = $temp;
+
+	// 4.
+	// Reverse the sequence from a[k + 1] up to and including the final element a[n].
+
+	// Part to be replaced.
+	$needle = substr( $string, $k + 1 );
+
+	$new_sequence = strrev( $needle );
+
+	$new_string = str_replace( $needle, $new_sequence, $string );
+
+	// Permutation done.
+
+	return $new_string;
+
 }
 
 $str = "0123456789";
-permute($str,0,strlen($str)); // call the function.
 
-sort($permutations);
+echo lexicographicPermute($str);
 
-echo "Answer: " . $permutations[ $index ];
+//echo "Answer: ";
 
 echo "</pre>";
 
