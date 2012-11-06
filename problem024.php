@@ -93,9 +93,13 @@ function lexicographicPermute( $string ) {
 
 $str = "0123456789";
 
-echo lexicographicPermute($str);
+for( $i = 0; $i < 1000000 - 1; $i++ ) {
 
-//echo "Answer: ";
+	$str = lexicographicPermute($str);
+
+}
+
+echo "Answer: $str";
 
 echo "</pre>";
 
