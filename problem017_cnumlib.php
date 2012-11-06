@@ -1,4 +1,4 @@
-<?
+<?php
 
 // This script is used to convert numbers to words.
 
