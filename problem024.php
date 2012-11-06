@@ -63,7 +63,7 @@ function lexicographicPermute( $string ) {
 	// Since k + 1 is such an index, l is well defined and satisfies k < l.
 	for( $i = $k + 1; $i < $length; $i++ ) {
 
-		if( $string[ $k ] < $string[ $i ] ) $l = $i;
+		if( strcmp( $string[ $k ], $string[ $i ] ) < 0 ) $l = $i;
 
 	}
 
