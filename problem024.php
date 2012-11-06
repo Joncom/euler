@@ -93,7 +93,7 @@ function lexicographicPermute( $string ) {
 
 $str = "0123456789";
 
-for( $i = 0; $i < 1000000 - 1; $i++ ) {
+for( $i = 1; $i < 1000000; $i++ ) {
 
 	$str = lexicographicPermute($str);
 
