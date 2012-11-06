@@ -71,7 +71,16 @@ for( $i = 0; $i < 10000; $i++ ) {
     // A potential pair amicable number.
     $pair = sumProperDivisors( $i );
 
-    if( $i == sumProperDivisors( $pair ) ) {
+    $pair_pair = sumProperDivisors( $pair );
+
+    $amicable = ( $i == $pair_pair );
+
+    echo ( $amicable ? "<b>" : "" )
+       . "d($i) = $pair, and d($pair) = $pair_pair."
+       . ( $amicable ? "</b>" : "" )
+       . "<br>";
+
+    if( $amicable ) {
 
         // i and pair are amicable.
 
