@@ -81,9 +81,29 @@ sort( $names );
 
 echo "<pre>";
 
-print_r( $names );
+$total_score = 0;
 
-//echo "Answer: ";
+for( $i = 0; $i < count( $names ); $i++ ) {
+
+	// Current position in the list.
+	$position = $i + 1;
+
+	$sum_letters = 0;
+
+	for( $letter = 0; $letter < strlen( $names[ $i ] ); $letter++ ) {
+
+		$sum_letters += $letter_to_number[ $names[ $i ][ $letter ] ];
+
+	}
+
+	$name_score = $sum_letters * $position;
+
+	// Add name score to total.
+	$total_score += $name_score;
+
+}
+
+echo "Total of all the name scores in the file: $total_score";
 
 echo "</pre>";
 
