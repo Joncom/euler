@@ -51,7 +51,9 @@ for( $year = 1901; $year <= 2000; $year++ ) {
 
 		$date = $month . "/01/" . $year;
 
-		echo $date . "<br>";
+		$time = strtotime( $date );
+
+		if( date( 'l', $time ) == "Sunday" ) $sunday_count++;
 
 	}
 
