@@ -41,7 +41,6 @@ $Start = getTime();
 
 set_time_limit( 30 );
 
-
 // Using code from Stackoverflow, populate an array
 // with all the dates we SHOULD be able to find.
 
@@ -62,35 +61,6 @@ set_time_limit( 30 );
 
 
 echo "<pre>";
-
-$sunday_count = 0;
-
-for( $year = 1901; $year <= 2000; $year++ ) {
-
-    for( $month = 1; $month <= 12; $month++ ) {
-
-        $date = sprintf('%d-%02d-01', $year, $month);
-
-        $time = strtotime( $date );
-
-        $is_sunday = ( date( 'l', $time ) == "Sunday" );
-
-        if( $is_sunday ) {
-
-            $key = array_search( $date, $dates );
-
-            // Remove found date from answer array.
-            if( $key !== false ) array_splice( $dates, $key );
-
-            echo "$date was a Sunday.<br>";
-
-            $sunday_count++;
-
-        }
-
-    }
-
-}
 
 echo "Answer: $sunday_count";
 
