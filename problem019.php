@@ -49,7 +49,7 @@ for( $year = 1901; $year <= 2000; $year++ ) {
 
     for( $month = 1; $month <= 12; $month++ ) {
 
-        $date = sprintf('%d-%d-01', $year, $month);
+        $date = sprintf('%d-%02d-01', $year, $month);
 
         $time = strtotime( $date );
 
