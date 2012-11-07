@@ -41,6 +41,8 @@ $Start = getTime();
 
 set_time_limit( 30 );
 
+$sunday_count = 0;
+
 // Using code from Stackoverflow, populate an array
 // with all the dates we SHOULD be able to find.
 
@@ -52,13 +54,9 @@ set_time_limit( 30 );
     while (!$time->diff($end)->invert) { //$time isn't greater than $end
         $time->modify("+1 month");
         if ($time->format("l") == "Sunday") {
-            array_push( $dates, $time->format("Y-m-d") );
+            $sunday_count++;
         }
     }
-
-    // dates is populated.
-
-
 
 echo "<pre>";
 
