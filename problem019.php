@@ -77,6 +77,11 @@ for( $year = 1901; $year <= 2000; $year++ ) {
 
         if( $is_sunday ) {
 
+            $key = array_search( $date, $dates );
+
+            // Remove found date from answer array.
+            if( $key !== false ) array_splice( $dates, $key );
+
             echo "$date was a Sunday.<br>";
 
             $sunday_count++;
