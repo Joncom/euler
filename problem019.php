@@ -55,11 +55,13 @@ for( $year = 1901; $year <= 2000; $year++ ) {
 
         $is_sunday = ( date( 'l', $time ) == "Sunday" );
 
-        echo "$date "
-           . ( $is_sunday ? 'was a Sunday. ' : '' )
-           . "<br>";
+        if( $is_sunday ) {
 
-        if( $is_sunday ) $sunday_count++;
+            echo "$date was a Sunday.<br>";
+
+            $sunday_count++;
+
+        }
 
     }
 
