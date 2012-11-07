@@ -33,8 +33,8 @@ $Start = getTime();
 / How many Sundays fell on the first of the month during
 / the twentieth century (1 Jan 1901 to 31 Dec 2000)?
 /
-/ Solution: ?
-/ Running-time: ?
+/ Solution: 171
+/ Running-time: 0.03 secs
 /
 /
 **************************/
