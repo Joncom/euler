@@ -49,8 +49,6 @@ $sunday_count = 0;
     $time = new DateTime("1901-01-01");
     $end = new DateTime("2000-12-31");
 
-    $dates = array();
-
     while (!$time->diff($end)->invert) { //$time isn't greater than $end
         $time->modify("+1 month");
         if ($time->format("l") == "Sunday") {
