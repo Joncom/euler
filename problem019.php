@@ -41,6 +41,26 @@ $Start = getTime();
 
 set_time_limit( 30 );
 
+
+// Using code from Stackoverflow, populate an array
+// with all the dates we SHOULD be able to find.
+
+    $time = new DateTime("1901-01-01");
+    $end = new DateTime("2000-12-31");
+
+    $dates = array();
+
+    while (!$time->diff($end)->invert) { //$time isn't greater than $end
+        $time->modify("+1 month");
+        if ($time->format("l") == "Sunday") {
+            array_push( $dates, $time->format("Y-m-d") );
+        }
+    }
+
+    // dates is populated.
+
+
+
 echo "<pre>";
 
 $sunday_count = 0;
