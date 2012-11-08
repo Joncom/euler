@@ -65,13 +65,14 @@ for( $base = $min; $base <= $max; $base++ ) {
 
 }
 
-sort( $results );
 
-$unique_results = array_unique( $results );
+//sort( $results );
+
+$results = array_unique( $results );
 
 //print_r( $unique_results );
 
-$answer = count( $unique_results );
+$answer = count( $results );
 
 echo "Answer: $answer";
 
