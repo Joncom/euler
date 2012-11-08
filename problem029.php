@@ -69,7 +69,7 @@ sort( $results );
 
 $unique_results = array_unique( $results );
 
-print_r( $unique_results );
+//print_r( $unique_results );
 
 $answer = count( $unique_results );
 
