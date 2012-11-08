@@ -65,12 +65,9 @@ for( $base = $min; $base <= $max; $base++ ) {
 
 }
 
-
 //sort( $results );
 
 $results = array_unique( $results );
-
-//print_r( $unique_results );
 
 $answer = count( $results );
 
