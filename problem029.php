@@ -41,7 +41,26 @@ $Start = getTime();
 
 set_time_limit( 30 );
 
+$min = 2;
+
+$max = 5;
+
+// Numbers found.
+$results = array();
+
 echo "<pre>";
+
+for( $base = $min; $base <= $max; $base++ ) {
+
+	for( $exponent = $min; $exponent <= $max; $exponent++ ) {
+
+		echo "$base^$exponent="
+		   . bcpow( $base, $exponent )
+		   . ( $exponent == $max ? "\n" : ", " );
+
+	}
+
+}
 
 echo "Answer: ";
 
