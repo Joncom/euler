@@ -43,7 +43,7 @@ set_time_limit( 30 );
 
 $min = 2;
 
-$max = 5;
+$max = 100;
 
 // Numbers found.
 $results = array();
