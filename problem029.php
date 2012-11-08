@@ -54,15 +54,26 @@ for( $base = $min; $base <= $max; $base++ ) {
 
 	for( $exponent = $min; $exponent <= $max; $exponent++ ) {
 
-		echo "$base^$exponent="
-		   . bcpow( $base, $exponent )
+		$result = bcpow( $base, $exponent );
+
+		echo "$base^$exponent=$result"
 		   . ( $exponent == $max ? "\n" : ", " );
+
+		$results[] = $result;
 
 	}
 
 }
 
-echo "Answer: ";
+sort( $results );
+
+$unique_results = array_unique( $results );
+
+print_r( $unique_results );
+
+$answer = count( $unique_results );
+
+echo "Answer: $answer";
 
 echo "</pre>";
 
