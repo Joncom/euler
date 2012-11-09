@@ -24,9 +24,8 @@ $Start = getTime();
 / Note: as 1! = 1 and 2! = 2 are not sums
 / they are not included.
 /
-/ Solution: ?
-/ Running-time: ?
-/
+/ Solution: 40730
+/ Running-time: 15.89 secs
 /
 **************************/
 
