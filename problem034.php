@@ -38,12 +38,13 @@ $Start = getTime();
 function bcfact($fact, $scale = 100)
 {
     if($fact == 1) return 1;
+    if($fact == 0) return 1;
     return bcmul($fact, bcfact(bcsub($fact, '1'), $scale), $scale);
 }
 
 set_time_limit( 30 );
 
-ini_set('memory_limit','1324M');
+//ini_set('memory_limit','1324M');
 
 echo "<pre>";
 
@@ -59,7 +60,7 @@ for( $i = 10; $i < 1000; $i++ ) {
 
 	$sum = 0;
 
-	echo "i=$i";
+	echo "$string ... ";
 
 	for( $index = 0; $index < $length; $index++ ) {
 
@@ -70,13 +71,17 @@ for( $i = 10; $i < 1000; $i++ ) {
 
 	}
 
-	echo "= $sum";
+	echo "= $sum ";
 
 	if( $sum == $i ) {
+
+		echo "<b><-- FOUND MATCH!</b>";
 
 		$total_sum = bcadd( $total_sum, $sum );
 
 	}
+
+	echo "\n";
 
 }
 
