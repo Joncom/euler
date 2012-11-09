@@ -52,7 +52,7 @@ $total_sum = 0;
 
 // Start at 10 since 1!=1, 2!=2,
 // and any lone factorial is not a sum.
-for( $i = 10; $i < 1000; $i++ ) {
+for( $i = 10; $i < 1000000; $i++ ) {
 
 	$string = strval( $i );
 
