@@ -30,11 +30,48 @@ $Start = getTime();
 /
 **************************/
 
+/*
+ * Computes the factoral (x!).
+ * @author Thomas Oldbury.
+ * @license Public domain.
+ */
+function bcfact($fact, $scale = 100)
+{
+    if($fact == 1) return 1;
+    return bcmul($fact, bcfact(bcsub($fact, '1'), $scale), $scale);
+}
+
 set_time_limit( 30 );
+
+$total_sum = 0;
+
+// Start at 10 since 1!=1, 2!=2,
+// and any lone factorial is not a sum.
+for( $i = 10; $i < 1000; $i++ ) {
+
+	$string = strval( $i );
+
+	$length = strlen( $string );
+
+	$sum = 0;
+
+	for( $index = 0; $index < $length; $index++ ) {
+
+		$sum = bcadd( $sum, bcfact( $string[ $index ] ) );
+
+	}
+
+	if( $sum == $i ) {
+
+		$total_sum = bcadd( $total_sum, $sum );
+
+	}
+
+}
 
 echo "<pre>";
 
-echo "Answer: ";
+echo "Answer: $total_sum";
 
 echo "</pre>";
 
