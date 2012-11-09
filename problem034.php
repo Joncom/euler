@@ -43,6 +43,10 @@ function bcfact($fact, $scale = 100)
 
 set_time_limit( 30 );
 
+ini_set('memory_limit','1324M');
+
+echo "<pre>";
+
 $total_sum = 0;
 
 // Start at 10 since 1!=1, 2!=2,
@@ -55,11 +59,18 @@ for( $i = 10; $i < 1000; $i++ ) {
 
 	$sum = 0;
 
+	echo "i=$i";
+
 	for( $index = 0; $index < $length; $index++ ) {
+
+		echo "$index!"
+		   . ( $index != $length - 1 ? ' + ' : ' ' );
 
 		$sum = bcadd( $sum, bcfact( $string[ $index ] ) );
 
 	}
+
+	echo "= $sum";
 
 	if( $sum == $i ) {
 
@@ -68,8 +79,6 @@ for( $i = 10; $i < 1000; $i++ ) {
 	}
 
 }
-
-echo "<pre>";
 
 echo "Answer: $total_sum";
 
