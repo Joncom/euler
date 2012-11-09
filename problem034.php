@@ -60,28 +60,32 @@ for( $i = 10; $i < 1000000; $i++ ) {
 
 	$sum = 0;
 
-	echo "$string ... ";
-
 	for( $index = 0; $index < $length; $index++ ) {
-
-		echo "$index!"
-		   . ( $index != $length - 1 ? ' + ' : ' ' );
 
 		$sum = bcadd( $sum, bcfact( $string[ $index ] ) );
 
 	}
 
-	echo "= $sum ";
-
 	if( $sum == $i ) {
 
+		echo "$string ... ";
+
+		for( $index = 0; $index < $length; $index++ ) {
+
+			echo "$index!"
+			   . ( $index != $length - 1 ? ' + ' : ' ' );
+
+		}
+
+		echo "= $sum ";
+
 		echo "<b><-- FOUND MATCH!</b>";
+
+		echo "\n";
 
 		$total_sum = bcadd( $total_sum, $sum );
 
 	}
-
-	echo "\n";
 
 }
 
