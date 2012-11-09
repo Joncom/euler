@@ -77,11 +77,9 @@ for( $i = 10; $i < 1000000; $i++ ) {
 
 		}
 
-		echo "= $sum ";
-
-		echo "<b><-- FOUND MATCH!</b>";
-
-		echo "\n";
+		echo "= $sum "
+		   . "<b><-- FOUND MATCH!</b>"
+		   . "\n";
 
 		$total_sum = bcadd( $total_sum, $sum );
 
