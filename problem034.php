@@ -42,7 +42,7 @@ function bcfact($fact, $scale = 100)
     return bcmul($fact, bcfact(bcsub($fact, '1'), $scale), $scale);
 }
 
-set_time_limit( 30 );
+set_time_limit( 60 );
 
 //ini_set('memory_limit','1324M');
 
