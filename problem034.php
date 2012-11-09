@@ -30,18 +30,6 @@ $Start = getTime();
 /
 **************************/
 
-/*
- * Computes the factoral (x!).
- * @author Thomas Oldbury.
- * @license Public domain.
- */
-function bcfact($fact, $scale = 100)
-{
-    if($fact == 1) return 1;
-    if($fact == 0) return 1;
-    return bcmul($fact, bcfact(bcsub($fact, '1'), $scale), $scale);
-}
-
 set_time_limit( 60 );
 
 //ini_set('memory_limit','1324M');
@@ -86,7 +74,7 @@ for( $i = 10; $i < 1000000; $i++ ) {
 
 	for( $index = 0; $index < $length; $index++ ) {
 
-		$sum = bcadd( $sum, bcfact( $string[ $index ] ) );
+		$sum = bcadd( $sum, $factorials[ $string[ $index ] ] );
 
 	}
 
